@@ -20,7 +20,9 @@ test: clean pytest
 	$(PYTEST) $(TEST_FOLDER); \
 	deactivate"
 
+.PHONY: clean
 clean:
+	@echo " -> Cleaning code..."
 	@find . -name '*.pyc' -delete
 
 pyenv: env/bin/$(PYTHON)
